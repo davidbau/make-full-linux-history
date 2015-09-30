@@ -6,4 +6,14 @@ make-full-linux-history.cmo
 history-dave
 history-tglx
 history-torvalds
+history-dave-adjust-last.sh
+history-dave-adjust.sh
+history-dave-annotated-last.log
+history-dave-first
+history-tglx-adjust.sh
+history-tglx-first
+history-torvalds-first
+linux-0.01.tar.gz
+linux-0.01
+prerelease-to-final
 
