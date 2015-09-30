@@ -1,0 +1,2184 @@
+commit 1ea864f1c53bc771294e61cf9be43b1d22e78f4c (Jan 30 2002)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:18:49 2002 -0800
+
+    v2.5.2.6 -> v2.5.3
+    
+    - Doug Ledford: i810 audio driver update
+    - Evgeniy Polyakov: update various SCSI drivers to new locking
+    - David Howells: syscall latency improvement, try 2
+    - Francois Romieu: dscc4 driver update
+    - Patrick Mochel: driver model fixes
+    - Andrew Morton: clean up a few details in ext3 inode initialization
+    - Pete Wyckoff: make x86 machine check print out right address..
+    - Hans Reiser: reiserfs update
+    - Richard Gooch: devfs update
+    - Greg KH: USB updates
+    - Dave Jones: PNPBIOS
+    - Nathan Scott: extended attributes
+    - Corey Minyard: clean up zlib duplication (triplication..)
+
+commit 2f886464aa00cd9eb9cf46c8c155a24a752bb317
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:17:56 2002 -0800
+
+    v2.5.2.5 -> v2.5.2.6
+    
+    - Asit Mallick: mtrr update
+    - Patrick Mochel: split up kernel/device.c into drivers/base
+    - Mikael Pettersson/Al Viro: fix missing in-core inode initialization
+    in ext2 introduced by Al's inode trimming
+    - David Miller: sparc and network updates
+    - Frank Davis: firewire video mmap page remapping fix
+    - me: fix configure help scripts to fix breakage noticed by Dave Jones
+    - Greg KH: USB updates
+    - Kai Germaschewski: ISDN fixes, Config.help entries
+    - Douglas Gilbert: SCSI doc update
+    - Ingo Molnar: x86 taskswitch optimizations, scheduler updates
+    - Mikael Pettersson: make APIC work on old external setups
+    - Al Viro: more inode trimming
+
+commit fe48f9c8ac1f6b93d8f1371f116a2a0d95d6bc19
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:17:16 2002 -0800
+
+    v2.5.2.4.1 -> v2.5.2.5
+    
+    - Jeff Garzik: net driver updates
+    - NIIBE Yutaka: SuperH update
+
+commit 397cbdc2c254c7650d75fc990d33a878e75fafb7
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:17:14 2002 -0800
+
+    v2.5.2.4 -> v2.5.2.4.1
+    
+    - Patrick Mochel: devicefs locking cleanups, refcount fixes
+    - Brian Gerst: apic timer cleanup
+    - Adam Richter: fix loop over block device bio breakage, ipfwadm compile fix
+    - Peter Anvin: bootproto v2.03
+    - me: split up Configure.help over the subdirectories where it is used
+
+commit 9d6ba121b7e17085c95139233686b27a4d4c650e
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:16:46 2002 -0800
+
+    v2.5.2.3 -> v2.5.2.4
+    
+    - Patrick Mochel: initcall levels
+    - Patrick Mochel: devicefs updates, add PCI devices into the hierarchy
+    - Denis Oliver Kropp: neomagic fb driver
+    - David Miller: sparc64 and network updates
+    - Kai Mäkisara: scsi tape update
+    - Al Viro: more inode trimming, VFS cleanup
+    - Greg KH: USB update - proper urb allocations
+    - Eric Raymond: kdev_t updates for fb devices
+
+commit 463727d199b089c420e750d43f75ea9403a45e12
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:16:39 2002 -0800
+
+    v2.5.2.2 -> v2.5.2.3
+    
+    - Al Viro: VFS inode allocation moved down to filesystem, trim inodes
+    - Greg KH: USB update, hotplug documentation
+    - Kai Germaschewski: ISDN update
+    - Ingo Molnar: scheduler tweaking ("J2")
+    - Arnaldo: emu10k kdev_t updates
+    - Ben Collins: firewire updates
+    - Björn Wesen: cris arch update
+    - Hal Duston: ps2esdi driver bio/kdev_t fixes
+    - Jean Tourrilhes: move wireless drivers into drivers/net/wireless,
+    update wireless API #1
+    - Richard Gooch: devfs race fix
+    - OGAWA Hirofumi: FATFS update
+
+commit 0713f0290054eb9769d588120712e3dccfb3ec34
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:13:48 2002 -0800
+
+    v2.5.2.1.1 -> v2.5.2.2
+    
+    - Al Viro: fix new_inode() allocation
+    - undo initcall update
+    - cciss driver update
+
+commit 468e6d17ff42e6f291a88c87681b2b5e34e9ab33
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:13:46 2002 -0800
+
+    v2.5.2.1 -> v2.5.2.1.1
+    
+    - David Howells: abtract out "current->need_resched" as "need_resched()"
+    - Frank Davis: ide-tape update for bio
+    - various: header file fixups
+    - Jens Axboe: fix up bio/ide/highmem issues
+    - Kai Germaschewski: ISDN update
+    - Tim Waugh: parport update
+    - Patrik Mochel: initcall update
+    - Greg KH: USB and Compaq PCI hotplug updates
+
+commit d694597ed5e1f6613d0933ee692333ab2542b603
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:13:42 2002 -0800
+
+    v2.5.2 -> v2.5.2.1
+    
+    - Al Viro: fix up silly problem in swapfile filp cleanups in 2.5.2
+    - Tachino Nobuhiro: fix another error return for swapfile filp code
+    - Robert Love: merge some of Ingo's scheduler fixes
+    - David Miller: networking, sparc and some scsi driver fixes
+    - Tim Waugh: parport update
+    - OGAWA Hirofumi: fatfs cleanups and bugfixes
+    - Roland Dreier: fix vsscanf buglets.
+    - Ben LaHaise: include file cleanup
+    - Andre Hedrick: IDE taskfile update
+
+commit 5fb612aa91a08c183200312d943de6691f806ce6 (Jan 14 2002)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:13:33 2002 -0800
+
+    v2.5.1.11 -> v2.5.2
+    
+    - Matt Domsch: combine common crc32 library
+    - Pete Zaitcev: ymfpci update
+    - Davide Libenzi: scheduler improvements
+    - Al Viro: almost there: "struct block_device *" everywhere
+    - Richard Gooch: devfs cpqarray update, race fix
+    - Rusty Russell: PATH_MAX should include the final '0' count
+    - David Miller: various random updates (mainly net and sparc)
+
+commit 18a933102825ea1e1b7e059234537d4d927e9216
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:13:01 2002 -0800
+
+    v2.5.1.10 -> v2.5.1.11
+    
+    - Davide Libenzi, Ingo Molnar: scheduler updates
+    - Greg KH: USB update
+    - Jean Tourrilhes: IrDA and wireless updates
+    - Jens Axboe: bio/block updates
+
+commit 908920b1d370e7a5c301d14cfce10c310be19be3
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:12:58 2002 -0800
+
+    v2.5.1.9 -> v2.5.1.10
+    
+    - Kai Germaschewski: ISDN updates
+    - Al Viro: start moving buffer cache indexing to "struct block_device *"
+    - Greg KH: USB update
+    - Russell King: fix up some ARM merge issues
+    - Ingo Molnar: scalable scheduler
+
+commit d01b7e92c0020f89b4bb33fe61c0dffab7078b42
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Tue Feb 5 00:06:23 2002 -0800
+
+    v2.5.1.8 -> v2.5.1.9
+    
+    - Russell King: large ARM update
+    - Adam Richter et al: more kdev_t updates
+
+commit 2161cc3b1b40e4f2b34c781e4d2dc648544629a8
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:59:55 2002 -0800
+
+    v2.5.1.7 -> v2.5.1.8
+    
+    - Greg KH: USB updates
+    - various: kdev_t updates
+    - Al Viro: more bread()/filesystem cleanups
+
+commit 39769961b842895bddecbae7d823e894a6a11d17
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:59:51 2002 -0800
+
+    v2.5.1.6 -> v2.5.1.7
+    
+    - Jeff Garzik: fix up loop and md for struct kdev_t typechecking
+    - Jeff Garzik: improved old-tulip network driver
+    - Arnaldo: more scsi driver bio updates
+    - Kai Germaschewski: ISDN updates
+    - various: kdev_t updates
+
+commit a914dd8b3b9ee9ccb2659b55fc98933c9f2a9c73
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:59:46 2002 -0800
+
+    v2.5.1.5 -> v2.5.1.6
+    
+    - Davide Libenzi: nicer timeslices for scheduler
+    - Arnaldo: wd7000 scsi driver cleanups and bio update
+    - Greg KH: USB update (including initial 2.0 support)
+    - me: strict typechecking on "kdev_t"
+
+commit ba6edf537004b1c68a0736c95ebe39a30a2537fb
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:59:43 2002 -0800
+
+    v2.5.1.4 -> v2.5.1.5
+    
+    - Dave Jones: more merging, fix up last merge..
+    - release to sync with Dave
+
+commit d0415686774477153ca911a612f74c2d2bb11be6
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:59:34 2002 -0800
+
+    v2.5.1.3 -> v2.5.1.4
+    
+    - Jens Axboe: more bio updates, fix some request list bogosity under load
+    - Al Viro: export seq_xxx functions
+    - Manfred Spraul: include file cleanups, pc110pad compile fix
+    - David Woodhouse: fix JFFS2 write error handling
+    - Dave Jones: start merging up with 2.4.x patches
+    - Manfred Spraul: coredump fixes, FS event counter cleanups
+    - me: fix SCSI CD-ROM sectorsize BIO breakage
+
+commit 25aa595a676f130148eba073cdd5a8d57e9d238f
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:59:27 2002 -0800
+
+    v2.5.1.2 -> v2.5.1.3
+    
+    - Christoph Hellwig: scsi_register_module cleanup
+    - Mikael Pettersson: apic.c LVTERR fixes
+    - Russell King: ARM update (including bio update for icside)
+    - Jens Axboe: more bio updates
+    - Al Viro: make ready to switch bread away from kdev_t..
+    - Davide Libenzi: scheduler cleanups
+    - Anders Gustafsson: LVM fixes for bio
+    - Richard Gooch: devfs update
+
+commit 6533333c8946e70120cc9d7fcad01e0f748d7863
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:59:22 2002 -0800
+
+    v2.5.1.1 -> v2.5.1.2
+    
+    - Al Viro: task-private namespaces, more cleanups
+
+commit 0925bad356699684440720f2a908030f98bc3284
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:59:20 2002 -0800
+
+    v2.5.1 -> v2.5.1.1
+    
+    - me: revert the "kill(-1..)" change.  POSIX isn't that clear on the
+    issue anyway, and the new behaviour breaks things.
+    - Jens Axboe: more bio updates
+    - Al Viro: rd_load cleanups. hpfs mount fix, mount cleanups
+    - Ingo Molnar: more raid updates
+    - Jakub Jelinek: fix Linux/x86 confusion about arg passing of "save_v86_state" and "do_signal"
+    - Trond Myklebust: fix NFS client race conditions
+
+commit 51f4a834d5661caada395e99fd713065f04bfc69 (Dec 16 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:59:17 2002 -0800
+
+    v2.5.0.11 -> v2.5.1
+    
+    - Al Viro: floppy_eject cleanup, mount cleanups
+    - Jens Axboe: bio updates
+    - Ingo Molnar: mempool fixes
+    - GOTO Masanori: Fix O_DIRECT error handling
+
+commit fe0976511d3b5cf2894da54bc451e561bd6b1482
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:59:01 2002 -0800
+
+    v2.5.0.10 -> v2.5.0.11
+    
+    - Jeff Garzik: no longer support old cards in tulip driver
+    (see separate driver for old tulip chips)
+    - Pat Mochel: driverfs/device model documentation
+    - Ballabio Dario: update eata driver to new IO locking
+    - Ingo Molnar: raid resync with new bio structures (much more efficient)
+    and mempool_resize()
+    - Jens Axboe: bio queue locking
+
+commit 800446073f02f3035bffad7f1ced654ff6b474c9
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:58:50 2002 -0800
+
+    v2.5.0.9 -> v2.5.0.10
+    
+    - Jens Axboe: more bio stuff
+    - Ingo Molnar: mempool for bio
+    - Niibe Yutaka: Super-H update
+
+commit b1507c9acd944c8703612c0e38ac580bf9064e8a
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:58:48 2002 -0800
+
+    v2.5.0.8 -> v2.5.0.9
+    
+    - Jeff Garzik: separate out handling of older tulip chips
+    - Jens Axboe: more bio stuff
+    - Anton Altaparmakov: NTFS 1.1.21 update
+
+commit 098b795507a08d023833c751381f885daa70436a
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:58:35 2002 -0800
+
+    v2.5.0.7 -> v2.5.0.8
+    
+    - Greg KH: USB updates
+    - Jens Axboe: more bio updates
+    - Christoph Rohland: fix up proper shmat semantics
+
+commit b54cee93b40ef775f12206d68f04fb8bb5edbfe9
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:58:33 2002 -0800
+
+    v2.5.0.6 -> v2.5.0.7
+    
+    - Jens Axboe: more bio fixes/cleanups/breakage ;)
+    - Al Viro: superblock cleanups, boot/root mounting.
+
+commit ef40d49b1f2892a4cbacd534403e45bcc5cb2694
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:58:31 2002 -0800
+
+    v2.5.0.5 -> v2.5.0.6
+    
+    - Jens Axboe: more bio stuff
+    - Coda compile fixes
+    - Nathan Laredo: stradis driver update
+
+commit cc5979c373db310084dc03b4cba091840dda2491
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:58:17 2002 -0800
+
+    v2.5.0.4 -> v2.5.0.5
+    
+    - Patrick Mochel: driver model infrastructure, part 1
+    - Jens Axboe: more bio fixes, cleanups
+    - Andrew Morton: release locking fixes
+    - Al Viro: superblock/mount handling
+    - Kai Germaschewski: AVM Fritz!Card ISDN driver
+    - Christoph Hellwig: make cramfs SMP-safe.
+
+commit 40b1df3aaf1d7d7258b501baa805fa2c5bb2692b
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:58:14 2002 -0800
+
+    v2.5.0.3 -> v2.5.0.4
+    
+    - Jens Axboe: fix up bio highmem breakage, more cleanups
+    - Greg KH: USB update
+
+commit 4d6c7b36fcb5b4d3a727a9d84353422bacd173a3
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:58:11 2002 -0800
+
+    v2.5.0.2 -> v2.5.0.3
+    
+    - Al Viro: more superblock cleanups
+    - Jens Axboe: more patches for new block IO layer
+    - Christoph Hellwig: get rid of the old, long- deprecated SCSI error
+    handling
+
+commit e1e2cfc3fb42dbe54dd94fe97ba17a62cd7a265b
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:58:06 2002 -0800
+
+    v2.5.0.1 -> v2.5.0.2
+    
+    - Greg KH: USB update
+    - Richard Gooch: refcounting for devfs
+    - Jens Axboe: start of new block IO layer
+
+commit 3735375e3fd2f2286c1dc2f0131f39d438ae9a5c
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:58:00 2002 -0800
+
+    v2.5.0 -> v2.5.0.1
+    
+    - me: README references to 2.4.x -> 2.5.x
+    - Alexander Viro: fix unmount inode breakage, show_vfsmnt cleanup
+    - Jeff Garzik: fix 8139too initialization
+
+commit 381ab1f538162eb985c9244aa7d56e54315881ab (Nov 23 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 23:57:59 2002 -0800
+
+    v2.4.15 -> v2.5.0
+    
+    - fork off 2.5.0, change version numbers
+
+commit 0c20a351a4f8508ba80e8f5b674034791e13d8e8 (Nov 23 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:33:56 2002 -0800
+
+    v2.4.14.9 -> v2.4.15
+    
+      - Jan Kara: fix quota SMP races with BKL
+
+commit 1040c54c3b98ac4f8d91bc313cdc9d6669481da3
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:33:54 2002 -0800
+
+    v2.4.14.8 -> v2.4.14.9
+    
+      - David Brownell: usbnet update
+      - Greg KH: USB and PCI hotplug update
+      - Ingo/me: fix SCHED_FIFO for UP/SMP for good (flw).
+      - Add back direct_IO now that it works again.
+
+commit 5aa875d2cbee34727963bd81aa992b64480045ca
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:33:52 2002 -0800
+
+    v2.4.14.7 -> v2.4.14.8
+    
+      - Richard Henderson: alpha update
+      - Andrew Morton: fix ext3/minix/sysv fsync behaviour.
+
+commit 6293d56ca18db9ed322b2a5550ac7b27bd538cff
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:33:51 2002 -0800
+
+    v2.4.14.6 -> v2.4.14.7
+    
+      - Jeff Garzik: network driver updates
+      - Christoph Hellwig: UFS filesystem byteorder cleanups
+      - me: modified Andrea VM page allocator tuning
+
+commit 5fc4bcdeadad92d4479f9a66b4e4d57717b13219
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:33:49 2002 -0800
+
+    v2.4.14.5 -> v2.4.14.6
+    
+      - Russell King: /proc/cpuinfo for ARM
+      - Paul Mackerras: PPC update (cpuinfo etc)
+      - Nicolas Aspert: fix Intel 8xx agptlb flush
+      - Marko Myllynen: "Lindent" doesn't really need bash ;)
+      - Alexander Viro: /proc/cpuinfo for s390/s390x/sh, /proc/pci cleanup
+      - Alexander Viro: make lseek work on seqfiles
+
+commit 2d46136da942fda8496a564524dddf2ac3881221
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:33:47 2002 -0800
+
+    v2.4.14.4 -> v2.4.14.5
+    
+      - Greg KH: enable hotplug driver support
+      - Andrea Arcangeli: remove bogus sanity check
+      - David Mosberger: /proc/cpuinfo and scsi scatter-gather for ia64
+      - David Hinds: 16-bit pcmcia network driver updates/cleanups
+      - Hugh Dickins: remove some stale code from VM
+      - David Miller: /proc/cpuinfo for sparc, sparc fork bug fix, network
+      fixes, warning fixes
+      - Peter Braam: intermezzo update
+      - Greg KH: USB updates
+      - Ivan Kokshaysky: /proc/cpuinfo for alpha
+      - David Woodhouse: jffs2 - remove dead code, remove gcc3 warning
+      - Hugh Dickins: fix kiobuf page allocation/deallocation
+
+commit 1fc742dd8e03a4957af9c1fee4a4e465781ba7a9
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:33:43 2002 -0800
+
+    v2.4.14.3 -> v2.4.14.4
+    
+      - Mikael Pettersson: make proc_misc happy without modules
+      - Arjan van de Ven: clean up acpitable implementation ("micro-acpi")
+      - Anton Altaparmakov: LDM partition code update
+      - Alan Cox: final (yeah, sure) small missing pieces
+      - Andrey Savochkin/Andrew Morton: eepro100 config space save/restore over suspend
+      - Arjan van de Ven: remove power from pcmcia socket on card remove
+      - Greg KH: USB updates
+      - Neil Brown: multipath updates
+      - Martin Dalecki: fix up some "asmlinkage" routine markings
+
+commit d40d1af9f0aebf7e108f1dfb66ac5af671bc9719
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:33:15 2002 -0800
+
+    v2.4.14.2 -> v2.4.14.3
+    
+      - Alan Cox: more driver merging
+      - Al Viro: make ext2 group allocation more readable
+
+commit a8a2069f432c5597bdf9c83ab3045b9ef32ab5e3
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:32:43 2002 -0800
+
+    v2.4.14.1 -> v2.4.14.2
+    
+      - Ivan Kokshaysky: fix alpha dec_and_lock with modules, for alpha config entry
+      - Kai Germaschewski: ISDN updates
+      - Jeff Garzik: network driver updates, sysv fs update
+      - Kai Mäkisara: SCSI tape update
+      - Alan Cox: large drivers merge
+      - Nikita Danilov: reiserfs procfs information
+      - Andrew Morton: ext3 merge
+      - Christoph Hellwig: vxfs livelock fix
+      - Trond Myklebust: NFS updates
+      - Jens Axboe: cpqarray + cciss dequeue fix
+      - Tim Waugh: parport_serial base_baud setting
+      - Matthew Dharm: usb-storage Freecom driver fixes
+      - Dave McCracken: wait4() thread group race fix
+
+commit 5db5272c0a5cd37e5a697e4750fbc4ce6317b7dc
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:30:11 2002 -0800
+
+    v2.4.14 -> v2.4.14.1
+    
+      - me: fix page flags race condition Andrea found
+      - David Miller: sparc and network updates
+      - various: fix loop driver that thought it was part of the VM system
+      - me: teach DRM about VM_RESERVED
+      - Alan Cox: more merging
+
+commit aad40ef3f2b9c4077e5a79606aed24a92ccb0406 (Nov 5 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:30:08 2002 -0800
+
+    v2.4.13.8 -> v2.4.14
+    
+      - David Miller: sparc/scsi scatterlist fixes
+      - Martin Mares: PCI ids, email address update
+      - David Miller: revert TCP hash optimizations that need more checking
+      - Ivan Kokshaysky/Richard Henderson: alpha update (atomic_dec_and_lock etc)
+      - Peter Anvin: cramfs/zisofs missing pieces
+
+commit 3ea86172d8f6ae13a896f78ec3f029bb410eacf2
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:30:06 2002 -0800
+
+    v2.4.13.7 -> v2.4.13.8
+    
+      - Andrea: fix races in do_wp_page, free_swap_and_cache
+      - me: clena up page dirty handling
+      - Tim Waugh: parport IRQ probing and documentation fixes
+      - Greg KH: USB updates
+      - Michael Warfield: computone driver update
+      - Randy Dunlap: add knowledge about some new io-apics
+      - Richard Henderson: alpha updates
+      - Trond Myklebust: make readdir xdr verify the reply packet
+      - Paul Mackerras: PPC update
+      - Jens Axboe: make cpqarray and cciss play nice with the request layer
+      - Massimo Dal Zotto: SMM driver for Dell Inspiron 8000
+      - Richard Gooch: devfs symlink deadlock fix
+      - Anton Altaparmakov: make NTFS compile on sparc
+
+commit 595cf06fad2068ed3e97caabbb92ebe71ffd97d9
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:30:02 2002 -0800
+
+    v2.4.13.6 -> v2.4.13.7
+    
+      - me: reinstate "delete swap cache on low swap" code
+      - David Miller: ksoftirqd startup race fix
+      - Hugh Dickins: make tmpfs free swap cache entries proactively
+
+commit 857805c6bdc445542e35347e18f1f0d21353a52c
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:30:01 2002 -0800
+
+    v2.4.13.5 -> v2.4.13.6
+    
+      - me: remember to bump the version number ;)
+      - Hugh Dickins: export "free_lru_page()" for modules
+      - Jeff Garzik: don't change nopage arguments, just make the last a dummy one
+      - David Miller: sparc and net updates (netfilter, VLAN etc)
+      - Nikita Danilov: reiserfs cleanups
+      - Jan Kara: quota initialization race
+      - Tigran Aivazian: make the x86 microcode update driver happy about
+      hyperthreaded P4's
+      - me: shrink dcache/icache more aggressively
+      - me: fix up oom-killer so that it actually works
+
+commit 22a160fb095ca694e9f7ee29f131382e1faec889
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:29:58 2002 -0800
+
+    v2.4.13.4 -> v2.4.13.5
+    
+      - Andrew Morton: remove stale UnlockPage
+      - me: swap cache page locking update
+
+commit f97f22cb0b9dca2a797feccc580b3b8fdb238ac3
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:29:56 2002 -0800
+
+    v2.4.13.3 -> v2.4.13.4
+    
+      - Mikael Pettersson: fix P4 boot with APIC enabled
+      - me: fix device queuing thinko, clean up VM locking
+
+commit ff35c838d857c189874481f52f65cf54183e908b
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:29:55 2002 -0800
+
+    v2.4.13.2 -> v2.4.13.3
+    
+      - René Scharfe: random bugfix
+      - me: block device queuing low-water-marks, VM mapped tweaking.
+
+commit 4fd9cc9e607b22cca3bf5990e677fe90fc8361e6
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:29:52 2002 -0800
+
+    v2.4.13.1 -> v2.4.13.2
+    
+      - Alan Cox: more merging
+      - Alexander Viro: block device module race fixes
+      - Richard Henderson: mmap for 32-bit alpha personality
+      - Jeff Garzik: 8139 and natsemi update
+
+commit 980adcb2cbdd20c15fe63b4c2db12ca0051d8c7d
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:26:51 2002 -0800
+
+    v2.4.13 -> v2.4.13.1
+    
+      - Michael Warfield: computone serial driver update
+      - Alexander Viro: cdrom module race fixes
+      - David Miller: Acenic driver fix
+      - Andrew Grover: ACPI update
+      - Kai Germaschewski: ISDN update
+      - Tim Waugh: parport update
+      - David Woodhouse: JFFS garbage collect sleep
+
+commit 9ff086a3d48d6f6e24281e6edb6c804091eda3d1 (Oct 24 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:24:48 2002 -0800
+
+    v2.4.12.6 -> v2.4.13
+    
+      - page write-out throttling
+      - Pete Zaitcev: ymfpci sound driver update (make Civ:CTP happy with it)
+      - Alan Cox: i2o sync-up
+      - Andrea Arcangeli: revert broken x86 smp_call_function patch
+      - me: handle VM write load more gracefully. Merge parts of -aa VM
+
+commit aed492fcb972130f11cd62fd8ca0b2af95f54d03
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:24:46 2002 -0800
+
+    v2.4.12.5 -> v2.4.12.6
+    
+      - Stephen Rothwell: APM idle time handling fixes, docbook update, cleanup
+      - Jeff Garzik: network driver updates
+      - Greg KH: USB updates
+      - Al Viro: UFS update, binfmt_misc rewrite.
+      - Andreas Dilger: /dev/random fixes
+      - David Miller: network/sparc updates
+
+commit 2ef7e8cef81e6a091de2aebd9d30c273edf6c13c
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:24:42 2002 -0800
+
+    v2.4.12.4 -> v2.4.12.5
+    
+      - Greg KH: usbnet fix
+      - Johannes Erdfelt: uhci.c bulk queueing fixes
+
+commit 96c4fbbe32bf8aaace615f5ad2469f5531dae781
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:24:41 2002 -0800
+
+    v2.4.12.3 -> v2.4.12.4
+    
+      - Al Viro: mnt_list init
+      - Jeff Garzik: network driver update (license tags, tulip driver)
+      - David Miller: sparc, net updates
+      - Ben Collins: firewire update
+      - Gerd Knorr: btaudio/bttv update
+      - Tim Hockin: MD cleanups
+      - Greg KH, Petko Manolov: USB updates
+      - Leonard Zubkoff: DAC960 driver update
+
+commit 975675b97f86323933d8f15b83660a60255988f7
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:24:35 2002 -0800
+
+    v2.4.12.2 -> v2.4.12.3
+    
+      - Jens Axboe: clean up duplicate unused request list
+      - Jeff Mahoney: reiserfs endianness finishing touches
+      - Hugh Dickins: some further swapoff fixes and cleanups
+      - prepare-for-Alan: move drivers/i2o into drivers/message/i2o
+      - Leonard Zubkoff: 2TB disk device fixes
+      - Paul Schroeder: mwave config enable
+      - Urban Widmark: fix via-rhine double free..
+      - Tom Rini: PPC fixes
+      - NIIBE Yutaka: SuperH update
+
+commit 14450c4668484d2413b09ca77753133bce60a3e9
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:23:59 2002 -0800
+
+    v2.4.12.1 -> v2.4.12.2
+    
+      - Alan Cox: more merging
+      - Ben Fennema: UDF module license
+      - Jeff Mahoney: reiserfs endian safeness
+      - Chris Mason: reiserfs O_SYNC/fsync performance improvements
+      - Jean Tourrilhes: wireless extension update
+      - Joerg Reuter: AX.25 updates
+      - David Miller: 64-bit DMA interfaces
+
+commit ad8dcf57e93e8e5f9b815e786da35ef03fc70f89
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:23:54 2002 -0800
+
+    v2.4.12 -> v2.4.12.1
+    
+      - Trond Myklebust: deadlock checking in lockd server
+      - Tim Waugh: fix up parport wrong #define
+      - Christoph Hellwig: i2c update, ext2 cleanup
+      - Al Viro: fix partition handling sanity check.
+      - Trond Myklebust: make NFS use SLAB_NOFS, and not play games with PF_MEMALLOC
+      - Ben Fennema: UDF update
+      - Alan Cox: continued merging
+      - Chris Mason: get /proc buffer memory sizes right after buf-in-page-cache
+
+commit 4c7ed1860c0d21292284fb044c465ba00ce89b7f (Oct 11 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:21:29 2002 -0800
+
+    v2.4.11 -> v2.4.12
+    
+      - Greg KH: USB update (fix UHCI timeouts, serial unplug)
+      - Christoph Rohland: shmem locking fixes
+      - Al Viro: more mount cleanup
+      - me: fix bad interaction with link_count handling
+      - David Miller: Sparc updates, net cleanup
+      - Tim Waugh: parport update
+      - Jeff Garzik: net driver updates
+
+commit 6211a2d822e38a0202f3a395a96272400409d7af (Oct 9 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:21:26 2002 -0800
+
+    v2.4.10.6 -> v2.4.11
+    
+      - Jeff Garzik: net driver updates
+      - me: symlink attach fix
+      - Greg KH: USB update
+      - Rui Sousa: emu10k driver update
+
+commit 0a528ace2ea013fe60efaf633084b154962bfdbb
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:21:22 2002 -0800
+
+    v2.4.10.5 -> v2.4.10.6
+    
+      - various: fix some module exports uncovered by stricter error checking
+      - Urban Widmark: make smbfs use same error define names as samba and win32
+      - Greg KH: USB update
+      - Tom Rini: MPC8xx ppc update
+      - Matthew Wilcox: rd.c page cache flushing fix
+      - Richard Gooch: devfs race fix: rwsem for symlinks
+      - Björn Wesen: Cris arch update
+      - Nikita Danilov: reiserfs cleanup
+      - Tim Waugh: parport update
+      - Peter Rival: update alpha SMP bootup to match wait_init_idle fixes
+      - Trond Myklebust: lockd/grace period fix
+
+commit 8b29e8edf0ed8f63ecb35b16946f222854d74ad0
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:21:01 2002 -0800
+
+    v2.4.10.4 -> v2.4.10.5
+    
+      - Keith Owens: module exporting error checking
+      - Greg KH: USB update
+      - Paul Mackerras: clean up wait_init_idle(), ppc prefetch macros
+      - Jan Kara: quota fixes
+      - Abraham vd Merwe: agpgart support for Intel 830M
+      - Jakub Jelinek: ELF loader cleanups
+      - Al Viro: more cleanups
+      - David Miller: sparc64 fix, netfilter fixes
+      - me: tweak resurrected oom handling
+
+commit 1d23a518b19f828e6521056cf295b08c3d6eab6c
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:20:57 2002 -0800
+
+    v2.4.10.3 -> v2.4.10.4
+    
+      - Al Viro: separate out superblocks and FS namespaces: fs/super.c fathers
+      fs/namespace.c
+      - David Woodhouse: large MTD and JFFS[2] update
+      - Marcelo Tosatti: resurrect oom handling
+      - Hugh Dickins: add_to_swap_cache racefix cleanup
+      - Jean Tourrilhes: IrDA update
+      - Martin Bligh: support clustered logical APIC for >8 CPU x86 boxes
+      - Richard Henderson: alpha update
+
+commit 0a97b16afbcaadbe4410d78adfe8967398454945
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:20:19 2002 -0800
+
+    v2.4.10.2 -> v2.4.10.3
+    
+      - Al Viro: superblock cleanups, partition handling fixes and cleanups
+      - Ben Collins: firewire update
+      - Jeff Garzik: network driver updates
+      - Urban Widmark: smbfs updates
+      - Kai Mäkisara: SCSI tape driver update
+      - various: embarrassing lack of error checking in ELF loader
+      - Neil Brown: md formatting cleanup.
+
+commit 5bf3be033f504f5fd79690fbb13d720407314e40
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:20:15 2002 -0800
+
+    v2.4.10.1 -> v2.4.10.2
+    
+      - me/Al Viro: fix bdget() oops with block device modules that don't
+      clean up after they exit
+      - Alan Cox: continued merging (drivers, license tags)
+      - David Miller: sparc update, network fixes
+      - Christoph Hellwig: work around broken drivers that add a gendisk more
+      than once
+      - Jakub Jelinek: handle more ELF loading special cases
+      - Trond Myklebust: NFS client and lockd reclaimer cleanups/fixes
+      - Greg KH: USB updates
+      - Mikael Pettersson: sparate out local APIC / IO-APIC config options
+
+commit 98b8803038fa999212c37952adad1e04144f0ab7
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:19:58 2002 -0800
+
+    v2.4.10.0.4 -> v2.4.10.1
+    
+      - Chris Mason: fix ppp race conditions
+      - Al Viro: block device cleanups/fixes
+      - Anton Altaparmakov: NTFS 1.1.20 update
+      - Andrea Arcangeli: VM tweaks
+
+commit a356c406f36e65105272b1a9127c0098a113511c
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:19:56 2002 -0800
+
+    v2.4.10.0.3 -> v2.4.10.0.4
+    
+      - more buffers-in-pagecache coherency
+
+commit fbc139f54fdb7edfec470421c2cc885d3796dfcd
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:19:55 2002 -0800
+
+    v2.4.10.0.2 -> v2.4.10.0.3
+    
+      - more buffers-in-pagecache coherency
+
+commit d51c905ac6b3d259cf977038b23163d00a869c1b
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:19:54 2002 -0800
+
+    v2.4.10.0.1 -> v2.4.10.0.2
+    
+      - more buffers-in-pagecache coherency
+
+commit a41cd6e4274462df70a72f57c5a6cb85db924a08
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:19:52 2002 -0800
+
+    v2.4.10 -> v2.4.10.0.1
+    
+      - me/al/andrea: buffers-in-pagecache coherency, buffer.c cleanups
+
+commit 8c7cba553c8a0d9c5b0ce660c1757f33a25ac25d (Sep 23 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:19:51 2002 -0800
+
+    v2.4.9.15 -> v2.4.10
+    
+      - Andrew Grover: ACPI update
+      - Al Viro: block devices..
+      - Andrea Arcangeli: fix list manipulation bogosity
+      - Trond Myklebust: 64-bit file locking fixes
+      - Brad Hards: USB CDC ethernet
+      - Chris Mason: reiserfs speedup
+      - Robert Love: re-merge AMD 761 GART support that was lost in -ac merge
+      - Adam Richter: check pci_module_init() return value
+
+commit e2f6721a0a1b07612c0682d8240d3e9bc0a445a4
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:19:17 2002 -0800
+
+    v2.4.9.14 -> v2.4.9.15
+    
+      - Jan Harkes: make Coda work with arbitrary host filesystems, not
+      just filesystems that use generic_file_read/write
+      - Al Viro: block device cleanups
+      - Hugh Dickins: swap device lock fixes - fix swap readahead race
+      - me, Andrea: more reference bit cleanups
+
+commit 269f8f707739116e68aee38d78d0cfb3d896b856
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:19:15 2002 -0800
+
+    v2.4.9.13 -> v2.4.9.14
+    
+      - Richard Gooch: devfs update
+      - Andrea Arcangeli: clean up/fix ramdisk handling now that it's in page cache
+      - Al Viro: follow up the above with initrd cleanups
+      - Keith Owens: get rid of drivers/scsi/53c700-mem.c file
+      - Trond Myklebust: RPC over TCP race fix
+      - Greg KH: USB update (ohci understands USB_ZERO_PACKET)
+      - me: clean up reference bit handling, fix silly GFP_ATOMIC allocation bug
+
+commit a27c6530ff12bab100e64c5b43e84f759fa353ae
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:19:13 2002 -0800
+
+    v2.4.9.12 -> v2.4.9.13
+    
+      - Manfred Spraul: /proc/pid/maps cleanup (and bugfix for non-x86)
+      - Al Viro: "block device fs" - cleanup of page cache handling
+      - Hugh Dickins: VM/shmem cleanups and swap search speedup
+      - David Miller: sparc updates, soc driver typo fix, net updates
+      - Jeff Garzik: network driver updates (dl2k, yellowfin and tulip)
+      - Neil Brown: knfsd cleanups and fixues
+      - Ben LaHaise: zap_page_range merge from -ac
+
+commit dfc52b82fee5bc6713ecce3f81767a8565c4f874
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:18:59 2002 -0800
+
+    v2.4.9.11 -> v2.4.9.12
+    
+      - Alan Cox: much more merging
+      - Pete Zaitcev: ymfpci race fixes
+      - Andrea Arkangeli: VM race fix and OOM tweak.
+      - Arjan Van de Ven: merge RH kernel fixes
+      - Andi Kleen: use more readable 'likely()/unlikely()' instead of __builtin_expect()
+      - Keith Owens: fix 64-bit ELF types
+      - Gerd Knorr: mark more broken PCI bridges, update btaudio driver
+      - Paul Mackerras: powermac driver update
+      - me: clean up PTRACE_DETACH to use common infrastructure
+
+commit a880f45a48be2956d2c78a839c472287d54435c1
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:18:55 2002 -0800
+
+    v2.4.9.10 -> v2.4.9.11
+    
+      - Neil Brown: md cleanups/fixes
+      - Andrew Morton: console locking merge
+      - Andrea Arkangeli: major VM merge
+
+commit c37fa164f793735b32aa3f53154ff1a7659e6442
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:18:41 2002 -0800
+
+    v2.4.9.9 -> v2.4.9.10
+    
+      - Alan Cox: continued merging
+      - Mingming Cao: make msgrcv/shmat check the queue/segment ID's properly
+      - Greg KH: USB serial init failure fix, Xircom serial converter driver
+      - Neil Brown: nsfd/raid/md/lockd cleanups
+      - Ingo Molnar: multipath RAID personality, raid xor update
+      - Hugh Dickins/Marcelo Tosatti: swapin read-ahead race fix
+      - Vojtech Pavlik: fix up some of the infrastructure for x86-64
+      - Robert Love: AMD 761 AGP GART support
+      - Jens Axboe: fix SCSI-generic queue handling race
+      - me: be sane about page reference bits
+
+commit 1d66e22e0f6b1cca563d240f90697b05860dca4d
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:18:34 2002 -0800
+
+    v2.4.9.8 -> v2.4.9.9
+    
+      - Greg KH: start migration to new "min()/max()"
+      - Roman Zippel: move affs over to "min()/max()".
+      - Vojtech Pavlik: VIA update (make sure not to IRQ-unmask a vt82c576)
+      - Jan Kara: quota bug-fix (don't decrement quota for non-counted inode)
+      - Anton Altaparmakov: more NTFS updates
+      - Al Viro: make nosuid/noexec/nodev be per-mount flags, not per-filesystem
+      - Alan Cox: merge input/joystick layer differences, driver and alpha merge
+      - Keith Owens: scsi Makefile cleanup
+      - Trond Myklebust: fix oopsable race in locking code
+      - Jean Tourrilhes: IrDA update
+
+commit 932f485f76f33b46e302fc390ee8e66529a2e5b4
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:17:27 2002 -0800
+
+    v2.4.9.7 -> v2.4.9.8
+    
+      - Christoph Hellwig: clean up personality handling a bit
+      - Robert Love: update sysctl/vm documentation
+      - make the three-argument (that everybody hates) "min()" be "min_t()",
+      and introduce a type-anal "min()" that complains about arguments of
+      different types.
+
+commit 7df131525f431f502873361fa2f8da2039d96c79
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:17:21 2002 -0800
+
+    v2.4.9.6 -> v2.4.9.7
+    
+      - Alan Cox: big driver/mips sync
+      - Andries Brouwer, Christoph Hellwig: more gendisk fixups
+      - Tobias Ringstrom: tulip driver workaround for DC21143 erratum
+
+commit 70a8be476e663526c3cb17a157c17ccf4fca5bd4
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:14:29 2002 -0800
+
+    v2.4.9.5 -> v2.4.9.6
+    
+      - Jens Axboe: remove trivially dead io_request_lock usage
+      - Andrea Arcangeli: softirq cleanup and ARM fixes. Slab cleanups
+      - Christoph Hellwig: gendisk handling helper functions/cleanups
+      - Nikita Danilov: reiserfs dead code pruning
+      - Anton Altaparmakov: NTFS update to 1.1.18
+      - firestream network driver: patch reverted on authors request
+      - NIIBE Yutaka: SH architecture update
+      - Paul Mackerras: PPC cleanups, PPC8xx update.
+      - me: reverse broken bootdata allocation patch that went into pre5
+
+commit 1c3cefa582a6b598d204bad02676df300e457efa
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:13:37 2002 -0800
+
+    v2.4.9.4 -> v2.4.9.5
+    
+      - Merge with Alan
+      - Trond Myklebust: NFS fixes - kmap and root inode special case
+      - Al Viro: more superblock cleanups, inode leak in rd.c, minix
+      directories in page cache
+      - Paul Mackerras: clean up rubbish from sl82c105.c
+      - Neil Brown: md/raid cleanups, NFS filehandles
+      - Johannes Erdfelt: USB update (usb-2.0 support, visor fix, Clie fix,
+      pl2303 driver update)
+      - David Miller: sparc and net update
+      - Eric Biederman: simplify and correct bootdata allocation - don't
+      overwrite ramdisks
+      - Tim Waugh: support multiple SuperIO devices, parport doc updates
+
+commit 991b3ae8019276269816512425f102c4687f2291
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:11:45 2002 -0800
+
+    v2.4.9.3 -> v2.4.9.4
+    
+      - Hugh Dickins: swapoff cleanups and speedups
+      - Matthew Dharm: USB storage update
+      - Keith Owens: Makefile fixes
+      - Tom Rini: MPC8xx build fix
+      - Nikita Danilov: reiserfs update
+      - Jakub Jelinek: ELF loader fix for ET_DYN
+      - Andrew Morton: reparent_to_init() for kernel threads
+      - Christoph Hellwig: VxFS and SysV updates, vfs_permission fix
+
+commit df0386374805089cbd09cc4a308e893be6738a93
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:11:43 2002 -0800
+
+    v2.4.9.2 -> v2.4.9.3
+    
+      - Johannes Erdfelt, Oliver Neukum: USB printer driver race fix
+      - John Byrne: fix stupid i386-SMP irq stack layout bug
+      - Andreas Bombe, me: yenta IO window fix
+      - Neil Brown: raid1 buffer state fix
+      - David Miller, Paul Mackerras: fix up sparc and ppc respectively for kmap/kbd_rate
+      - Matija Nalis: umsdos fixes, and make it possible to boot up with umsdos
+      - Francois Romieu: fix bugs in dscc4 driver
+      - Andy Grover: new PCI config space access functions (eventually for ACPI)
+      - Albert Cranford: fix incorrect e2fsprog data from ver_linux script
+      - Dave Jones: re-sync x86 setup code, fix macsonic kmalloc use
+      - Johannes Erdfelt: remove obsolete plusb USB driver
+      - Andries Brouwer: fix USB compact flash version info, add blksize ioctls
+
+commit 87f504e5c78b910b0c1d6ffb89bc95e492322c84
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:11:40 2002 -0800
+
+    v2.4.9.1 -> v2.4.9.2
+    
+      - Al Viro: block device cleanups
+      - Marcelo Tosatti: make bounce buffer allocations more robust (it's ok
+      for them to do IO, just not cause recursive bounce IO. So allow them)
+      - Anton Altaparmakov: NTFS update (1.1.17)
+      - Paul Mackerras: PPC update (big re-org)
+      - Petko Manolov: USB pegasus driver fixes
+      - David Miller: networking and sparc updates
+      - Trond Myklebust: Export atomic_dec_and_lock
+      - OGAWA Hirofumi: find and fix umsdos "filldir" users that were broken
+      by the 64-bit-cleanups. Fix msdos warnings.
+      - Al Viro: superblock handling cleanups and race fixes
+      - Johannes Erdfelt++: USB updates
+
+commit f7bad91dac8ba67fbffb094f662f7444a0891314
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:10:43 2002 -0800
+
+    v2.4.9 -> v2.4.9.1
+    
+      - Jeff Hartmann: DRM AGP/alpha cleanups
+      - Ben LaHaise: highmem user pagecopy/clear optimization
+      - Vojtech Pavlik: VIA IDE driver update
+      - Herbert Xu: make cramfs work with HIGHMEM pages
+      - David Fennell: awe32 ram size detection improvement
+      - Istvan Varadi: umsdos EMD filename bug fix
+      - Keith Owens: make min/max work for pointers too
+      - Jan Kara: quota initialization fix
+      - Brad Hards: Kaweth USB driver update (enable, and fix endianness)
+      - Ralf Baechle: MIPS updates
+      - David Gibson: airport driver update
+      - Rogier Wolff: firestream ATM driver multi-phy support
+      - Daniel Phillips: swap read page referenced set - avoid swap thrashing
+
+commit bb5b6e6c4dea4242f6ff75fa7adecea4f34935f1 (Aug 16 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:10:26 2002 -0800
+
+    v2.4.8.4 -> v2.4.9
+    
+      - David Miller: sparc updates, FAT fs fixes, btaudio build fix
+      - David Gibson: Orinoco driver update
+      - Kevin Fleming: more disks the HPT controller doesn't like
+      - David Miller: "min()/max()" cleanups. Understands signs and sizes.
+      - Ben LaHaise: make vma merging more generous, help Mozilla /proc/<>/maps
+      - Jens Axboe: CD updates
+      - Trond Myklebust: save away NFS credentials in inode, so that mmap can
+      writeout.
+      - Mark Hemment: HIGHMEM ops cleanups
+      - Jes Sorensen: use "unsigned long" for flags in various drivers
+
+commit 0b9ded43ee424791d9283cee2a33dcb4a97da57d
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:10:21 2002 -0800
+
+    v2.4.8.3 -> v2.4.8.4
+    
+      - Tim Hockin: NatSemi ethernet update
+      - Kurt Garloff: make PS/2 mouse reconnect adjustable like 2.2.x
+      - Daniel Phillips: unlazy use-once
+      - David Miller: undo poll() limit braindamage
+      - me: make return value from do_try_to_free_pages() meaningful
+
+commit a45eec0736717ff951f93b4a30ed605a8d95a3d4
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:10:20 2002 -0800
+
+    v2.4.8.2 -> v2.4.8.3
+    
+      - Patrick Mochel: fix PCI:PCI bridge 64-bit memory type detection
+      - me: more forgotten nfsd off_t -> loff_t
+      - Alan Cox: ide driver merge
+      - Eric Lammerts, Rik van Riel: when oom, kill all threads.
+      - Ben LaHaise: use down_read, not down_write() in map_user_kiobuf.
+      We don't change the mappings, we just read them.
+      - Kai Germaschewski: ISDN updates
+      - Roland Fehrenbacher: sparse lun check
+      - Tim Waugh: handle awkward Titan parallel/serial port cards
+      - Stephen Rothwell: APM updates
+      - Anton Altaparmakov: NTFS updates
+
+commit 2be208bc58825f9b71833b4a24155689bbacc7f2
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:10:01 2002 -0800
+
+    v2.4.8.1 -> v2.4.8.2
+    
+      - me: fix forgotten nfsd usage of filldir off_t -> loff_t change
+      - Alan Cox: more driver merges
+
+commit a67f1b5da2cf8b14395596048c876247b894aa5c
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:09:44 2002 -0800
+
+    v2.4.8 -> v2.4.8.1
+    
+      - Rui Sousa: emu10k1 module fixes, remove joystick part.
+      - Alan Cox: driver merges
+      - Andrea Arkangeli: alpha updates
+      - David Woodhouse: up_and_exit -> complete_and_exit
+      - David Miller: sparc and network update
+      - Andrew Morton: update 3c59x driver
+      - Neil Brown: NFS export VFAT, knfsd cleanups, raid fixes
+      - Ben Collins: ieee1394 updates
+      - Paul Mackerras: PPC update
+      - me: make sure we don't lose position bits in "filldir()"
+
+commit e9e7d7fa16122d7bfa6f87188828baf6080cb02e (Aug 10 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:08:34 2002 -0800
+
+    v2.4.7.8 -> v2.4.8
+    
+      - Rik van Riel: free up swap cache on swapin when swap is full..
+      - Robert Love: merge emu10k sound driver.  This one is better ("Yeah,
+      you actually get sound out of it")
+      - Jeremy Linton: swapin/swapoff race condition fix
+
+commit 6c4b34bf750efec94cdb1b5b4851d46ea21dfffc
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:08:16 2002 -0800
+
+    v2.4.7.7 -> v2.4.7.8
+    
+      - Jeff Hartmann: serverworks AGP gart unload memory leak fix
+      - Marcelo Tosatti: make zone_inactive_shortage() return how big the shortage is.
+      - Hugh Dickins: tidy up age_page_down()
+      - Al Viro: super block handling cleanups
+
+commit dfc05323cf886ed7faca146cbee5cdad1a62157f
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:08:13 2002 -0800
+
+    v2.4.7.6 -> v2.4.7.7
+    
+      - me: sane and nice VM balancing
+      - Jeff Hartmann: upgrade DRM to XF86 4.1.x, drop support for 4.0.x
+
+commit 52683c563e38d75819d8ac5e8e9e40505e99e117
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:03:50 2002 -0800
+
+    v2.4.7.5 -> v2.4.7.6
+    
+      - me: better dirty balancing
+      - David Miller: sparc and network updates
+
+commit a931b32fc32a4c59f711ddea37ed56d414c9ded7
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:03:48 2002 -0800
+
+    v2.4.7.4 -> v2.4.7.5
+    
+      - Alan Cox: more merging
+      - L.C. Chang: new SiS IDE PCI id's.
+      - Maciej Rozycki: make MP table parsing more anal. Should fix broken P4 MP tables.
+      - Leonard Zubkoff: merge DAC960 completion changes
+      - Christoph Rohland: saner tmpfs mount-time limit behaviour (and remount)
+      - me: buffer.c logic update - faster and hopefully livelock-free
+
+commit 70d68bd32041d22febb277038641d55c6ac7b57a
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 20:03:43 2002 -0800
+
+    v2.4.7.3 -> v2.4.7.4
+    
+      - David Mosberger: IA64 update
+      - Geert Uytterhoeven: cleanup, new atyfb
+      - Marcelo Tosatti: zone aging fixes
+      - me, others: limit IO requests sanely
+
+commit 48ad999d6fe95727a27b9ec82e522398d05cd928
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:14:58 2002 -0800
+
+    v2.4.7.2 -> v2.4.7.3
+    
+      - Ben Collins: 1394 updates
+      - Matthew Dharm: USB storage update
+      - Ion Badulescu: starfire driver update
+      - VM aging cleanups
+
+commit 80b4c191cbea7c104e825a4e7e94980dcb33fee0
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:14:56 2002 -0800
+
+    v2.4.7.1 -> v2.4.7.2
+    
+      - Kai Germaschewski: ISDN updates
+      - David Miller: sparc and network updates
+      - Andrea Arcangeli, Maksim Krasnyanskiy: tasklet fixes
+      - Stelian Pop: Motion Eye camera driver update
+      - Jens Axboe: DAC960 update
+
+commit 6fbaac38b85e4bd3936b882392e3a9b45e8acb46
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:14:54 2002 -0800
+
+    v2.4.7 -> v2.4.7.1
+    
+      - Anton Altaparmakov: NTFS error checking
+      - Johannes Erdfelt: USB updates
+      - OGAWA Hirofumi: FAT update
+      - Alan Cox: driver + s390 update merge
+      - Richard Henderson: fix alpha sigsuspend error return value
+      - Marcelo Tosatti: per-zone VM shortage
+      - Daniel Phillips: generic use-once optimization instead of drop-behind
+      - Bjorn Wesen: Cris architecture update
+      - Anton Altaparmakov: support for Windows Dynamic Disks
+      - James Washer: LDT loading SMP bug fix
+
+commit 6f267f9cc2ea3c375b3e70e336f4feb7da365fe3 (Jul 20 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:14:05 2002 -0800
+
+    v2.4.6.9 -> v2.4.7
+    
+      - me: fix ptrace and /proc issues with new core-dump permissions
+      - numerous: IDE tape driver update for completion handlers
+      - Ben Collins: ieee1394 GUID cleanups
+      - Jacek Stepniewski: nasty deadlock in rename()
+
+commit 7b4d3039dfd2cbfa15127c29dcb557f314d13db1
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:12:19 2002 -0800
+
+    v2.4.6.8 -> v2.4.6.9
+    
+      - Dan Quinlan: cramfs update
+      - Ben Collins: IEEE 1394 update
+      - David Miller: network update (pppoe, routing cache stats), sparc32 update
+      - me: only dump core once per threaded app (first one wins)
+      - me: use new completion handlers for block device requests (same race
+      as with vfork, see -pre7)
+
+commit fff10634980710b1edd0c849b8478d3f5ec5ee95
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:11:28 2002 -0800
+
+    v2.4.6.7 -> v2.4.6.8
+    
+      - Chris Mason: reiserfs update
+      - Paul Mackerras: PPC updates (softirq)
+      - Kai Germaschewski: ISDN updates
+      - various: workaround for cpuid inline asm problem with egcs-2.91.66
+
+commit 74f5133bc757c27c168be048b66ddfe53160a793
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:11:26 2002 -0800
+
+    v2.4.6.6 -> v2.4.6.7
+    
+      - Andreas Dilger: various ext2 cleanups
+      - Richard Gooch: devfs update
+      - Johannes Erdfelt: USB updates
+      - Alan Cox: merges
+      - David Miller: fix SMP pktsched bootup deadlock (CONFIG_NET_SCHED)
+      - Roman Zippel: AFFS update
+      - Anton Altaparmakov: NTFS update
+      - me: fix races in vfork() (semaphores are not good completion handlers)
+      - Jeff Garzik: net driver updates, sysvfs update
+
+commit 08eb400cbebc7717f546845df7b87ad6f8711cf5
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:11:21 2002 -0800
+
+    v2.4.6.5 -> v2.4.6.6
+    
+      - me: fix more buffer head SMP races (non-x86 only - weak memory ordering)
+      - Andrea Arkangeli: some bh cleanups from the buffer race condition fix
+      - Tim Waugh: parport drievr documentation, init sanity
+      - Ion Badulescu: starfire net driver update
+      - David Miller: sparc and networking updates
+      - Ivan Kokshaysky: alpha version of the inlined rw-semaphores
+      - NIIBE Yutaka: SuperH update
+
+commit 9582480a60d0be5ac47e3da2777ec828278abf7f
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:10:49 2002 -0800
+
+    v2.4.6.4 -> v2.4.6.5
+    
+      - remember to bump the version string
+      - Andrea Arkangeli: softirq cleanups and fixes, and everybody is happy
+      again (ie I changed some details to make me happy ;)
+      - Neil Brown: raid5 stall fix, nfsd filehandle sanity check fix
+
+commit ccb6dd87174f4f71a0d15838a70a2b97bed6e203
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:10:48 2002 -0800
+
+    v2.4.6.3 -> v2.4.6.4
+    
+      - David Miller: sparc and networking updates
+      - Al Viro: SysV FS add_link off-by-two bogosity.
+      - Jeff Garzik: merge D-Link DL2k GigE driver, other network driver cleanups
+      - Kai Germaschewski: ISDN update
+      - Alan Cox: more merging (MPT fusion core)
+      - Johannes Erdfelt: USB updates
+      - Stas Sergeev: make sure we return out of vm86 mode when interrupts
+      get re.enabled
+      - Rusty Russell: netfilter fixes for ipt_unclean and ip_queue
+      - me: initialize page->age when adding it to the swap cache
+      - Paul Mackerras: PPC updates
+      - some subtle fs/buffer.c race conditions (Andrew Morton, me)
+
+commit d62f43c548aa4bf76b6206b02f178a3a570d1114
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:10:34 2002 -0800
+
+    v2.4.6.2 -> v2.4.6.3
+    
+      - merge with Alan (SCSI subsystem)
+      - Jeff Garzik: make serial driver PCI hotplug-aware
+
+commit adbc4706552e90140e7d5c42b71bbd4a17a6bd4c
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:10:32 2002 -0800
+
+    v2.4.6.1 -> v2.4.6.2
+    
+      - merge with Alan (USB, zoran, sony motion-eye, rio, dmi-scan)
+
+commit 170233272f5a2045a5f8fb37b980197e420c4a76
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:10:08 2002 -0800
+
+    v2.4.6 -> v2.4.6.1
+    
+      - merge with Alan (irda, s390, mips64, chris, sk98lin, mips/mm)
+      - rth: fix alpha RTC calibration
+      - Paul Mackerras: fix PPC typo
+
+commit 740d9a78d59dc1c6584bc43bb1a64671f390c12c (Jul 3 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:08:35 2002 -0800
+
+    v2.4.5.9 -> v2.4.6
+    
+      - misc mtd updates
+
+commit 2d80cb2a5e022225b9512ccc98f7979cc4b92ce8
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 19:08:33 2002 -0800
+
+    v2.4.5.8 -> v2.4.5.9
+    
+      - make sure "sync()" doesn't effectively lock up the machine by
+      overloading all the IO resources
+      - fix up some network memory allocations that don't wan tto wait on IO.
+      - merge with Alan (including MIPS update)
+      - Jeff Garzik: network driver updates.
+      - Al Viro: System V FS update (write capability, page cache, mondo cleanups)
+      - Kai Germaschewski: ISDN cleanups, TURBOPAM driver by Stelian Pop
+      - Ben Fennema: UDF update (time handling, i_blocks fix)
+      - Neil Brown: md error handling improvements, knfsd file handle compatibility
+      - Paul Mackerras: PPC update
+      - Jakub Jelinek: fix up kernel linker scripts to accept .rodata better
+      - Patrick Mochel: fix PME handling in pci_enable_wake()
+      - Chris Mason: reiserfs PF_MEMALLOC handling
+
+commit 75b566af5cc6f64f9ab5b66608ff8ce18098a2b4
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:48:25 2002 -0800
+
+    v2.4.5.7 -> v2.4.5.8
+    
+      - me: fix GFB_BUFFER thinkos. Make buffer syncing more efficient.
+      Make sure we don't leave buffers on the LOCKED list forever
+      - David Miller: networking and sparc updates
+
+commit ff31dc0b2b944b3d08c20d4d2a79e47345ac8b16
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:48:23 2002 -0800
+
+    v2.4.5.6 -> v2.4.5.7
+    
+      - Patrick Mochel: PCI documentation, and PM cleanups
+      - mtd: export nand ECC functions
+      - Jes Sorenson: acenic driver update
+      - Alan Cox: fix vxfs merge boo-boo
+      - me: undo page_launder() LRU changes, they have nasty side effects
+      - wanrouter: fix error code
+
+commit 29f279c764808560eaceb88fef36cbc35c529aad
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:48:22 2002 -0800
+
+    v2.4.5.5 -> v2.4.5.6
+    
+      - Jeff Garzik: net driver updates, PCI PM induced cleanups
+      - Me: do ACPI first, so that it doesn't mess up existing device driver
+      configurations.  Notably it used to completely destroy PCMCIA on some
+      Sony VAIOs.
+      - Paul Mackerras: powermac drivers and MAINTAINERS update
+      - NIIBE Yutaka: SuperH update
+      - Johannes Erdfelt: USB driver updates
+      - Russell King: ARM update
+      - Alan Cox: merging, merging, merging
+
+commit 396a6123577d5a9f563cc53c481731cf498bf294
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:47:14 2002 -0800
+
+    v2.4.5.4 -> v2.4.5.5
+    
+      - Johannes Erdfelt: USB update (bluetooth and serial)
+      - Andrew Grover: ACPI update for _real_ this time.
+      - Neil Brown: md update
+      - Keith Owens: kbuild script fix, do_softirq versioning fix
+      - David Miller: sparc and portability updates
+
+commit 7a9a18cff5fbb3fd56e01d0436f29a9c83a3a333
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:39:14 2002 -0800
+
+    v2.4.5.3 -> v2.4.5.4
+    
+      - Chris Mason: ReiserFS pre-allocation locking bugfix
+      - David Miller: fix bitops users (requires "long" alignment)
+      - Andrey Savochkin: file locking failure case SMP lock fix
+      - Urban Widmark: smbfs update (avoid unnecessary flushing, make NetApp
+      work)
+      - Andrew Grover: ACPI update
+      - Jeff Garzik: network driver updates
+      - Maciej Rozycki: IO-APIC level trigger problem workaround
+      - Rusty Russell: ipt_unclean fix
+      - Richard Gooch: devfs update
+
+commit a5287abe398b74df9040d6dcd8356cf53a174e84
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:38:57 2002 -0800
+
+    v2.4.5.2 -> v2.4.5.3
+    
+      - remember to increment the version number
+      - Chris Mason: reiserfs mark_journal_new and bh leak fix
+      - Richard Gooch: devfs update
+      - Alexander Viro: further FS cleanup (superblock list)
+      - David Woodhouse: MTD update
+      - Kai Germaschewski: ISDN update (stanford checker fixes etc)
+      - Rich Baum: gcc-3.0 warning fixes
+      - Jeff Garzik: network driver updates
+      - Geert Uytterhoeven: m68k fbdev logo merge glitch fix
+      - Andrea Arcangeli: fix signal return path
+      - David Miller: Sparc updates
+      - Johannes Erdfelt: USB update
+      - Carsten Otte, Andries Brouwer: don't clear blk_size unconditionally
+      on partition check
+      - Martin Frey: alpha Sable irq fix
+      - Paul Mackerras: PPC softirq update
+      - Patrick Mochel: PCI power management infrastructure
+      - Robert Siemer: miroSOUND driver update
+      - Neil Brown: knfsd updates, including ability to export ReiserFS filesystems
+      - Trond Myklebust: NFS readdir fixup, don't update atime on client
+      - Andrew Morton: truncate_inode_pages speedup
+      - Paul Menage: make inode quota count all inodes..
+
+commit 4fdbe71c852f4b44203913c93a5d3a8a12041167
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:35:36 2002 -0800
+
+    v2.4.5.1 -> v2.4.5.2
+    
+      - Takanori Kawano: brlock indexing bugfix
+      - Ingo Molnar, Jeff Garzik: softirq updates and fixes
+      - Al Viro: rampage of superblock cleanups.
+      - Jean Tourrilhes: Orinoco driver update v6, IrNET update
+      - Trond Myklebust: NFS brown-paper-bag thing
+      - Tim Waugh: parport update
+      - David Miller: networking and sparc updates
+      - Jes Sorensen: m68k update.
+      - Ben Fennema: UDF update
+      - Geert Uytterhoeven: fbdev logo updates
+      - Willem Riede: osst driver updates
+      - Paul Mackerras: PPC update
+      - Marcelo Tosatti: unlazy swap cache
+      - Mikulas Patocka: hpfs update
+
+commit d2a0e8decde7ef3354d8cdaa0ddf5517e5759ca2
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:35:05 2002 -0800
+
+    v2.4.5 -> v2.4.5.1
+    
+      - Andreas Dilger: make ext2fs react more gracefully to inode disk
+      errors
+      - Andrea Arkangeli: fix up alpha compile issues
+      - Ingo Molnar: io-apic MP table parsing update and softirq latency
+      update
+      - Johannes Erdfelt: USB updates
+      - Richard Henderson: alpha rawhide irq handling fixes
+      - Marcelo, Andrea, Rik: more VM issues
+      - Al Viro: fix various ext2 directory handling checks by biting the
+      bullet and using the page cache.
+
+commit 9c6f70be049f5a0439996107e58bf65e9a5d9a09 (May 25 2001))
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:35:03 2002 -0800
+
+    v2.4.4.6 -> v2.4.5
+    
+      - Alan Cox: camera conversion missed parts
+      - Neil Brown: md graceful alloc failure
+      - Andrea Arkangeli: more alpha fixups, bounce buffer deadlock avoidance
+      - Adam Fritzler: tms380tr driver update
+      - Al Viro: VFS layer cleanups
+
+commit c9df1e203d7efe8c93d3cdc04093f44f040f8e83
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:24:48 2002 -0800
+
+    v2.4.4.5 -> v2.4.4.6
+    
+      - Johannes Erdfelt: OHCI hash-chain corruption fix, USB updates
+      - Richard Henderson, Ivan Kokshaysky: alpha PCI iommu fixes
+      - Tim Waugh: parport changelogs and printk levels
+      - Andrew Morton: vmalloc off-by-one (overly sensitive) test
+      - Al Viro: VFS layer cleanups
+      - Cort Dougan: PPC updates (big bootloader re-org)
+      - Alan Cox: more merges, remove phillips camera conversion code
+      - Andrea Arkangeli: alpha fixups
+      - OGAWA Hirofumi: big-sector support with FAT
+      - Neil Brown: more md fixes
+
+commit 560e89962e32171585dd95af9ac9911ebc0e02ce
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:17:03 2002 -0800
+
+    v2.4.4.4 -> v2.4.4.5
+    
+      - Al Viro: fs cleanups
+      - David Miller: sparc semaphores
+      - Christoph Hellwig: VxFS update
+      - Asit Mallick: set machine check bit with set_in_cr4
+      - Richard Henderson: fix alpha pci_controller_num(), sg_fill, SRM poweroff.
+      - Johannes Erdfelt: USB updates
+      - Cort Dougan: bitkeeper Id's on the ppc side
+      - Matt Chapman: NFS file locking SMP lock fix
+      - Alan Cox: further merging
+
+commit 923215ae27c66dc2d25cc93ce1f7d3ef821c80bc
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:16:28 2002 -0800
+
+    v2.4.4.3 -> v2.4.4.4
+    
+      - Russell King: ARM updates
+      - Al Viro: more init cleanups
+      - Cort Dougan: more PPC updates
+      - David Miller: cleanups, pci mmap updates
+      - Neil Brown: raid resync by sector
+      - Alan Cox: more merging with -ac
+      - Johannes Erdfelt: USB updates
+      - Kai Germaschewski: ISDN updates
+      - Tobias Ringstrom: dmfe.c network driver update
+      - Trond Myklebust: NFS client updates and cleanups
+
+commit 02947070b658af5e0d8abdc7ad8486423a143553
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:16:22 2002 -0800
+
+    v2.4.4.2 -> v2.4.4.3
+    
+      - Al Viro: sanity-check user arguments, zero-terminated strings etc.
+      - Urban Widmark: smbfs update (server/client cache coherency etc)
+      - Rik van Riel, Marcelo Tosatti: VM updates
+      - Cort Dougan: PPC updates
+      - Neil Brown: raid1/5 failed drive fixups, NULL ptr checking, md error cleanup
+      - Neil Brown: knfsd fix for 64-bit architectures, and filehandle resolveir
+      - Ken Brownfield: workaround for menuconfig CPU selection glitch
+      - David Miller: sparc64 MM setup fix, arpfilter forward port
+      - Keith Owens: Remove obsolete IPv6 provider based addressing
+      - Jari Ruusu: block_write error case cleanup fix
+      - Jeff Garzik: netdriver update
+
+commit 26560b559096e33ec86b09e3649e5235691a5197
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:15:44 2002 -0800
+
+    v2.4.4.1 -> v2.4.4.2
+    
+      - David Miller: network syncup (better TCP page fault handling by Andrea etc)
+      - Tim Hockin: moxa driver fixes
+      - Alexander Viro: clean up process reaping procedures, make /proc use
+      the proper fields to notice that the process is gone, gone, gone.
+      - Justin Gibbs: aic7xxx driver update to 6.1.13.
+      - me: fix PCI allocation so that it doesn't stomp on unknown memory
+      - Jeff Garzik: 8139too net drvr fix
+      - Nigel Gamble: merge page fault interrupt gate from preemtible kernel.
+      Fixes problem noticed by Brian Gerst.
+      - Jean Tourrilhes: Orinoco / Airport support diff. Mucho cleanups.
+
+commit 236e6127ad942fa9712f83a2d441e0ba7c3fc190
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:14:02 2002 -0800
+
+    v2.4.4 -> v2.4.4.1
+    
+      - Al Viro: clean up driver "invalidate_device()" mess
+      - Andries Brouwer: make sd.c work with USB Dane-Elec CompactFlash Card
+      Reader
+      - me: fix nasty lazy kernel page table update problem
+      - me: undo fork changes. Too many user-level bugs and unresolved issues.
+      - Peter Anvin: iso9660 cleanups
+      - Alan Cox: big merge
+      - Johannes Erdfelt: UHCI pci DMA setup fix
+
+commit 7216d3e927c3b6c5d28e5ffaa54afbb34649debb (Apr 27 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:13:58 2002 -0800
+
+    v2.4.3.8 -> v2.4.4
+    
+      - Andrea Arkangeli: raw-io fixes
+      - Johannes Erdfelt: USB updates
+      - reiserfs update
+      - Al Viro: fsync/umount race fix
+      - Rusty Russell: netfilter sync
+
+commit 4095b99c09e3db837b17f031da096a0213cdd527
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:13:54 2002 -0800
+
+    v2.4.3.7 -> v2.4.3.8
+    
+      - Al Viro: fix d_flags race between low-level fs and VFS layer.
+      - David Miller: sparc updates
+      - S390 update
+
+commit ed6eefe4382ab3a72d70922d401b7c8003513f13
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:13:52 2002 -0800
+
+    v2.4.3.6 -> v2.4.3.7
+    
+      - Johannes Erdfelt: USB updates
+      - David Howells: more rw-sem stuff
+      - David Miller: network callback cleanups and fixes
+      - Jan Harkes: make Coda use the proper VFS layer interfaces, so that it can use
+      "non-traditional-unix" filesystems without inode numbers for backing store.
+
+commit 24579a8815132babf322c6d73608ce31f9b28ac8
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:13:22 2002 -0800
+
+    v2.4.3.5 -> v2.4.3.6
+    
+      - Chris Mason: daemonize reiserfs commit thread
+      - Alan Cox: syncup (AFFS might even work, and official VIA workarounds)
+      - Jeff Garzik: network driver updates
+      - Paul Mackerras: PPP update
+      - David Howells: more rw-sem cleanups, updates. Slowly getting somewhere.
+
+commit 9102e0eb3e9e472dabe91d65783662d5619cf83b
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:13:09 2002 -0800
+
+    v2.4.3.4 -> v2.4.3.5
+    
+      - Mike Phillips: olympic driver update
+      - Alan Cox: continued resyncing (lots of small stuff, big NTFS merge from Anton)
+      - Martin Dalecki: cleanup (remove unused and unnecessary get_hardblocksize)
+      - Chris Mason: fix potential reiserfs journal overflow
+      - Jeff Garzik: network driver updates
+      - David Miller: sparc fixes, some network cleanups
+
+commit d39a11f309a4fdeeed232dd6c0f00604d11a4aea
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:12:47 2002 -0800
+
+    v2.4.3.3 -> v2.4.3.4
+    
+      - David Miller: sparc rw semaphores moved over
+      - Alan Cox: yet more resyncs
+      - NIIBE Yutaka: Super-H driver update
+      - David Howells: more rw-sem cleanups, updates
+      - USB updates
+      - Al Viro: filesystem init cleanup
+
+commit 1a0153507ffae9cf3350e76c12d441788c0191e1
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:11:38 2002 -0800
+
+    v2.4.3.2 -> v2.4.3.3
+    
+      - Hui-Fen Hsu: sis900 driver update
+      - NIIBE Yutaka: Super-H update
+      - Alan Cox: more resyncs (ARM down, but more to go)
+      - David Miller: network zerocopy, Sparc sync, qlogic,FC fix, etc.
+      - David Miller/me: get rid of various drivers hacks to do mmap
+      alignment behind the back of the VM layer. Create a real
+      protocol for it.
+
+commit b0683ac8928c4cf40646a6ce3eb6ffe94605acfa
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:10:03 2002 -0800
+
+    v2.4.3.1 -> v2.4.3.2
+    
+      - Ingo Molnar/Al Viro: don't use bforget() on ext2 (and minix) metadata
+      where we may not be the only owner of the buffer! FS corruption.
+      - Andi Kleen: IPv6 packet re-assembly fix.
+      - David Howells: fix up rwsem implementation
+      - Alan Cox: more merging (S/390 down, ARM to go).
+      - Jens Axboe: LVM and loop fixes
+
+commit 3544b3289d633721041f6d96d0efee8f79cd435b
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:07:03 2002 -0800
+
+    v2.4.3 -> v2.4.3.1
+    
+      - Bob Tracy: Cyrix MTRR setup fix (don't make it twice as big as asked
+      for)
+      - Trond Myklebust: rpciod needs to be PF_MEMALLOC to avoid deadlocks on
+      memory allocation when writing out NFS data under low memory conditions.
+      Fix up BKL and RPC interactions.
+      - Jeff Garzik: tulip network driver update
+      - fix truncate to call down to the filesystem with the kernel lock.
+      - David Mosberger: ia64 update
+      - David Mosberger: simplify ELF program header generation.
+      - Alan Cox: merge from -ac series
+      - Jeff Garzik: make serial.c recognize modem devices properly
+
+commit 27c07b258df990ce981108198eca19b2512a202a (Mar 29 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:06:18 2002 -0800
+
+    v2.4.2.8 -> v2.4.3
+    
+      - Kai Germaschewski: Makefile dependency fixes. ISDN update
+      - Chris Mason: another reiserfs tail writing fix
+      - unify pte/pmd allocation
+      - undo some VIA PCI fixups - conflicting behaviour
+
+commit 8b11a705bdc5fd9f39b113f7d1dc9c8eeabe301b
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:06:16 2002 -0800
+
+    v2.4.2.7 -> v2.4.2.8
+    
+      - Paul Mackerras: PPC update for thread-safe page table handling
+      - Ingo Molnar: x86 PAE update for thread-safe page table handling
+      - Jeff Garzik: network driver updates, i810 rng driver, and
+      "alloc_etherdev()" network driver insert race condition fix.
+      - David Miller: UltraSparcIII update, network locking fixes
+      - Al Viro: fix fs counts on mount failure
+
+commit 90a880a460aeb2374d6c766c08fa7786fb982aae
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:04:02 2002 -0800
+
+    v2.4.2.6 -> v2.4.2.7
+    
+      - more bugs found by the automatic stanford checker, yay!
+      - Andrew Morton: fix SAK locking bugs by moving it into a process context
+      - Johannes Erdfelt: USB updates
+      - Jeff Garzik: merge Hermes driver by David Gibson
+      - Jens Axboe: cdrom merges, ll_rw_blk proper accounting
+
+commit 94540b50ad2616f3ee1ea9f851d90f16174ed7bc
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:04:00 2002 -0800
+
+    v2.4.2.5 -> v2.4.2.6
+    
+      - Jeff Garzik: network driver merge
+      - Andrew Morton: fix missed page_table_lock unlock
+      - David Miller: Qlogic,FC bufix, page allocation order problem.
+
+commit cc80f8f99c1ba16d54b0af64cb3911cd0146259e
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:03:57 2002 -0800
+
+    v2.4.2.4 -> v2.4.2.5
+    
+      - Rik van Riel and others: mm rw-semaphore (ps/top ok when swapping)
+      - IDE: 256 sectors at a time is legal, but apparently confuses some
+      drives. Max out at 255 sectors instead.
+      - Petko Manolov: USB pegasus driver update
+      - make the boottime memory map printout at least almost readable.
+      - USB driver updates
+      - pte_alloc()/pmd_alloc() need page_table_lock.
+
+commit 8565fe850b04acbfdc4c24cdcafeed359bb0f2b3
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:03:54 2002 -0800
+
+    v2.4.2.3 -> v2.4.2.4
+    
+      - Petr Vandrovec, Al Viro: dentry revalidation fixes
+      - Stephen Tweedie / Manfred Spraul: kswapd and ptrace race
+      - Neil Brown: nfsd/rpc/raid cleanups and fixes
+
+commit b56566c61ebe66fc5c9aa33385ba5b13bf6a8957
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:03:52 2002 -0800
+
+    v2.4.2.2 -> v2.4.2.3
+    
+      - Alan Cox: continued merging
+      - Urban Widmark: smbfs fix (d_add on already hashed dentry - no-no).
+      - Andrew Morton: 3c59x update
+      - Jeff Garzik: network driver cleanups and fixes
+      - Gérard Roudier: sym-ncr drivers update
+      - Jens Axboe: more loop cleanups and fixes
+      - David Miller: sparc update, some networking fixes
+
+commit 44e8778cf19e61151a4819b771186c7e4c49bff1
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:02:18 2002 -0800
+
+    v2.4.2.1 -> v2.4.2.2
+    
+      - Jens Axboe: fix loop device deadlocks
+      - Greg KH: USB updates
+      - Alan Cox: continued merging
+      - Tim Waugh: parport and documentation updates
+      - Cort Dougan: PowerPC merge
+      - Jeff Garzik: network driver updates
+      - Justin Gibbs: new and much improved aic7xxx driver 6.1.5
+
+commit c37b3aca314d94297b0f6ce1fefdf18d8d6cece6
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 18:00:07 2002 -0800
+
+    v2.4.2 -> v2.4.2.1
+    
+      - Chris Mason: reiserfs, another null bytes bug
+      - Andrea Arkangeli: make SMP Athlon build
+      - Alexander Zarochentcev: reiserfs directory fsync SMP locking fix
+      - Jeff Garzik: PCI network driver updates
+      - Alan Cox: continue merging
+      - Ingo Molnar: fix RAID AUTORUN ioctl, scheduling improvements
+
+commit 6db68906c1bb26066a32c8e5be0c523da41cf08f (Feb 21 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:59:22 2002 -0800
+
+    v2.4.1.4 -> v2.4.2
+    
+      - sync up more with Alan
+      - Urban Widmark: smbfs and HIGHMEM fix
+      - Chris Mason: reiserfs tail unpacking fix ("null bytes in reiserfs files")
+      - Adan Richter: new cpia usb ID
+      - Hugh Dickins: misc small sysv ipc fixes
+      - Andries Brouwer: remove overly restrictive sector size check for
+      SCSI cd-roms
+
+commit 2a7117ac7c120c085c56745f753166b821022858
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:59:15 2002 -0800
+
+    v2.4.1.3 -> v2.4.1.4
+    
+      - big S/390x 64-bit merge
+      - typos and license name fixes. doc updates.
+      - more include file cleanups (phase out "malloc.h")
+      - even more elevator corner cases.. When not merging, find the best insertion point.
+      - pmac ide update
+      - network fixes (netif_wake_queue on tx timeout)
+      - USB printer select() fix
+      - NFS client missed initialization, deamon fixed client address check
+
+commit c8ebfc888f9ee93f2dc7cd62b3be66263755d99a
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:57:11 2002 -0800
+
+    v2.4.1.2 -> v2.4.1.3
+    
+      - Jens: better ordering of requests when unable to merge
+      - Neil Brown: make md work as a module again (we cannot autodetect
+      in modules, not enough background information)
+      - Neil Brown: raid5 SMP locking cleanups
+      - Neil Brown: nfsd: handle Irix NFS clients named pipe behavior and
+      dentry leak fix
+      - maestro3 shutdown fix
+      - fix dcache hash calculation that could cause bad hashes under certain
+      circumstances (Dean Gaudet)
+      - David Miller: networking and sparc updates
+      - Jeff Garzik: include file cleanups
+      - Andy Grover: ACPI update
+      - Coda-fs error return fixes
+      - rth: alpha Jensen update
+
+commit 5d12a58c4049a4839abbbdf87dd189505513b1b6
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:56:46 2002 -0800
+
+    v2.4.1.1 -> v2.4.1.2
+    
+      - driver sync up with Alan
+      - Andrew Morton: wakeup cleanup and race fix
+      - Paul Mackerras: macintosh driver updates.
+      - don't trust "page_count()" on reserved pages!
+      - Russell King: fix serious IDE multimode write bug!
+      - me, Jens, others: fix elevator problem
+      - ARM, MIPS and cris architecture updates
+      - alpha updates: better page clear/copy, avoid kernel lock in execve
+      - USB and firewire updates
+      - ISDN updates
+      - Irda updates
+
+commit 1644c00da2252cb979743060056b2e2778884e99
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:53:28 2002 -0800
+
+    v2.4.1 -> v2.4.1.1
+    
+      - XMM: don't allow illegal mxcsr values
+      - ACPI: handle non-existent battery strings gracefully
+      - Compaq Smart Array driver update
+      - Kanoj Sarcar: serial console hardware flow control support
+      - ide-cs: revert toc-valid cache checking in 2.4.1
+      - Vojtech Pavlik: update via82cxxx driver to handle the vt82c686
+      - raid5 graceful failure handling fix
+      - ne2k-pci: enable device before asking the irq number
+      - sis900 driver update
+      - riva FB driver update
+      - fix silly inode hashing pessimization
+      - add SO_ACCEPTCONN for SuS
+      - remove modinfo hack workaround, all newer modutils do it correctly
+      - datagram socket shutdown fix
+      - mark process as running when it takes a page-fault
+
+commit 294b0fa792e0420b6d8bbbd27018fc764c1feb7d (Jan 30 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:53:25 2002 -0800
+
+    v2.4.0.12 -> v2.4.1
+    
+      - Al Viro: core file hardlink attack avoidance fix
+
+commit c9b9226830bdc88e57166ec7355bccda28eb95f5
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:53:24 2002 -0800
+
+    v2.4.0.11 -> v2.4.0.12
+    
+      - Get non-cpuid Cyrix probing right (it's not a NexGen)
+      - Jens Axboe: cdrom tray status and queing cleanups
+      - AGP GART: don't disable VIA, and allow i815 with external AGP
+      - Coda: use iget4() in order to have big inode numbers without clashes.
+      - Fix UDF writepage() page locking
+      - NIIBE Yutaka: SuperH update
+      - Martin Diehl and others: SiS pirq routing fixes
+      - Andy Grover: ACPI update
+      - Andrea Arkangeli: LVM update
+      - Ingo Molnar: RAID cleanups
+      - David Miller: sparc and networking updates
+      - Make NFS really be able to handle large files
+
+commit 5e787ed514bb4b83cf5c74db1245547aecc4375a
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:52:31 2002 -0800
+
+    v2.4.0.10 -> v2.4.0.11
+    
+      - Trond Myklebust: NFS/RPC client SMP fixes
+      - rth: alpha pyxis and cabriolet fixes
+      - remove broken sys_wait4() declarations
+      - disable radeon debugging code
+      - VIA IDE driver should not enable autodma unless asked for
+      - Andrey Savochkin: eepro100 update. Should fix the resource timing problems.
+      - Jeff Garzik: via82cxxx_audio update
+      - YMF7xx PCI audio update: get rid of old broken driver, make new
+      driver handle legacy control too.
+      - fix missed wakeup on block device request list
+      - hpt366 controller doesn't play nice with some IBM harddisks
+      - remove inode pages from the page cache only after having removed them
+      from the page tables.
+      - shared memory out-of-swap writepage() fixup (no more magic return)
+
+commit baf4e2cf9dddbc39fdb7dde6e3f9ebc107b67b78
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:52:29 2002 -0800
+
+    v2.4.0.9 -> v2.4.0.10
+    
+      - got a few too-new R128 #defines in the Radeon merge. Fix.
+      - tulip driver update from Jeff Garzik
+      - more cpq and DAC elevator fixes from Jens. Looks good.
+      - Petr Vandrovec: nicer ncpfs behaviour
+      - Andy Grover: APCI update
+      - Cort Dougan: PPC update
+      - David Miller: sparc updates
+      - David Miller: networking updates
+      - Neil Brown: RAID5 fixes
+
+commit 6805de5d7eb97f6e905b152b2fc1ee03fd0fb3aa
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:50:39 2002 -0800
+
+    v2.4.0.8 -> v2.4.0.9
+    
+      - cpq array driver elevator fixes
+      - merge radeon driver from X CVS tree
+      - ispnp cleanups
+      - emu10k unlock on error fixes
+      - hpfs doesn't allow truncate to larger
+
+commit 9910fd91295aa8cad5f5d7fb88b258b191eb1630
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:50:38 2002 -0800
+
+    v2.4.0.7 -> v2.4.0.8
+    
+      - USB hotplug updates/fixes
+      - boots on real i386 machines
+      - fix n_tty "canon" mode SMP race
+      - FAT fat_cache SMP race fix
+
+commit 3175e85b413df8cecb7d9360226d2a0753da50fc
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:50:36 2002 -0800
+
+    v2.4.0.6 -> v2.4.0.7
+    
+      - fix inode state comparison bug from ReiserFS merge
+
+commit e73dff56fdff565457c7788712e9042771bec106
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:50:36 2002 -0800
+
+    v2.4.0.5 -> v2.4.0.6
+    
+      - blk-14 from Jens Axboe
+
+commit 950a2b0b551d258daad060b9566910ca351d176a
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:50:35 2002 -0800
+
+    v2.4.0.4 -> v2.4.0.5
+    
+      - ppp UP deadlock attack fix
+
+commit 6aea16664696367eaab3ec2c00922c942a601073
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:50:33 2002 -0800
+
+    v2.4.0.3 -> v2.4.0.4
+    
+      - ReiserFS merge
+      - fix DRM R128/AGP dependency
+
+commit 448ba078f486e18d82975e86e50bb1fee82fb5f2
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:50:32 2002 -0800
+
+    v2.4.0.2 -> v2.4.0.3
+    
+      - me: clean up XMM support
+
+commit 3192b2dcbe00fdfd6a50be32c8c626cf26b66076
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:50:31 2002 -0800
+
+    v2.4.0.1 -> v2.4.0.2
+    
+      - ISDN fixes
+      - VM balancing tuning
+
+commit 43e9282d088b07f03fc16a5325ff74cf49fb2990
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:50:30 2002 -0800
+
+    v2.4.0 -> v2.4.0.1
+    
+      - Don't drop a megabyte off the old-style memory size detection
+      - remember to UnlockPage() in ramfs_writepage()
+      - 3c59x driver update from Andrew Morton
+      - egcs-1.1.2 miscompiles depca: workaround by Andrew Morton
+      - dmfe.c module init fix: Andrew Morton
+      - dynamic XMM support. Andrea Arkangeli.
+      - Locked SHM segment deadlock fix
+      - fork() page table copy race fix
+
+commit 7a2deb32924142696b8174cdf9b38cd72a11fc96 (Jan 4 2001)
+Author: Linus Torvalds <torvalds@athlon.transmeta.com>
+Date:   Mon Feb 4 17:40:40 2002 -0800
+
+    Import changeset
