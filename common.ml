@@ -269,7 +269,7 @@ let rec dump r =
     )
     else if t = abstract_tag then opaque "abstract"
     else if t = custom_tag then opaque "custom"
-    else if t = final_tag then opaque "final"
+    else if t = custom_tag then opaque "final"
     else failwith ("dump: impossible tag (" ^ string_of_int t ^ ")")
   )
 
@@ -1628,7 +1628,7 @@ let rec split_on_char c s =
   with Not_found -> [s]
 
 
-let lowercase = String.lowercase
+let lowercase = String.lowercase_ascii
 
 let quote s = "\"" ^ s ^ "\""  
 
@@ -2126,7 +2126,7 @@ let read_file_orig file = cat file +> unlines
 let read_file file =
   let ic = open_in file  in
   let size = in_channel_length ic in
-  let buf = String.create size in
+  let buf = Bytes.create size in
   really_input ic buf 0 size;
   close_in ic;
   buf
@@ -3730,7 +3730,7 @@ let parserCommon lexbuf parserer lexer =
     let result = parserer lexer lexbuf in
     result
   with Parsing.Parse_error ->
-    print_string "buf: "; print_string lexbuf.Lexing.lex_buffer;
+    print_string "buf: "; print_string(Bytes.to_string lexbuf.Lexing.lex_buffer);
     print_string "\n";
     print_string "current: "; print_int lexbuf.Lexing.lex_curr_pos;
     print_string "\n";
@@ -3819,7 +3819,7 @@ let info_from_charpos a b =
 
 let (full_charpos_to_pos2: filename -> (int * int) array ) = fun filename ->
 
-    let arr = Array.create (filesize filename + 2) (0,0) in
+    let arr = Array.make (filesize filename + 2) (0,0) in
 
     let chan = open_in filename in
 
@@ -4345,4 +4345,3 @@ let typing_sux_test () =
    (f1 x; f2 x)
 
 (* let _ = if not !Sys.interactive then (main ()) *)
-
